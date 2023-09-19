@@ -1,6 +1,6 @@
 Units Converter Android App
 
-![Units Converter Main Page](https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82 | width =250)
+![Units Converter Main Page](https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82)
 
 Welcome to the Unit Converter Android App repository!
 This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.
@@ -47,12 +47,13 @@ Screenshot from the Length fragment:
 ![Length Fragment](https://github.com/youssefaoun0/Units-Converter/assets/124771092/d45622aa-73e9-49c9-94f6-bd2353523c4d)
 
 
-License
+License:
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
 
-Contact
+Contact:
+
 Have questions or suggestions? Feel free to reach out:
 
-Email: y.aoun@outlook.com
+Email: y.aoun@outlook.com.
 LinkedIn: [Youssef Aoun's LinkedIn Profile](https://www.linkedin.com/in/youssef-aoun-5334b31a2/).

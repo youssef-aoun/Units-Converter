@@ -10,9 +10,13 @@ Built using Android Studio and Java language, this project leverages Adapters, M
 Features:
 
 1- Multi-category Unit Conversion: Quickly switch between different unit conversion categories to handle a wide range of measurement types.
+
 2- User-Friendly Interface: The app offers an intuitive and visually appealing user interface that simplifies the conversion process.
+
 3- Data Binding: Utilizes Android's data binding library for efficient UI updates and seamless user interactions.
+
 4- Shared Preferences: To keep track of your last conversions even on app shutdown.
+
 5- Clipboard Manager: Press on any unit and you will have the value of the unit after conversion copied to your clipboard.
 
 Categories Supported:
@@ -38,7 +42,9 @@ Getting Started:
 To get started with the Unit Converter Android App, follow these steps:
 
 1- Clone this repository to your local machine using git clone [repository_url].
+
 2- Open the project in Android Studio.
+
 3- Build and run the app on an Android emulator or a physical device.
 
 
@@ -57,4 +63,5 @@ Contact:
 Have questions or suggestions? Feel free to reach out:
 
 Email: y.aoun@outlook.com.
+
 LinkedIn: [Youssef Aoun's LinkedIn Profile](https://www.linkedin.com/in/youssef-aoun-5334b31a2/).

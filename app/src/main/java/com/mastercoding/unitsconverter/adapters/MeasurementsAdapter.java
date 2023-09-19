@@ -23,7 +23,7 @@ import com.mastercoding.unitsconverter.fragments.Area;
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.fragments.Length;
 import com.mastercoding.unitsconverter.fragments.Speed;
-import com.mastercoding.unitsconverter.adapters.interfaces.ItemClickListener;
+import com.mastercoding.unitsconverter.interfaces.ItemClickListener;
 import com.mastercoding.unitsconverter.models.MeasurementsModel;
 
 import java.util.ArrayList;

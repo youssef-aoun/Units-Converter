@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.adapters.interfaces;
+package com.mastercoding.unitsconverter.interfaces;
 
 import android.view.View;
 

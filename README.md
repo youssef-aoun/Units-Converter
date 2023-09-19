@@ -54,9 +54,9 @@ To get started with the Unit Converter Android App, follow these steps:
 
 
 <br><br>
-### Screenshot from the Length fragment:
-
-<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="400" height="700">
+<h3><p align="center">Screenshot from the Length fragment:</p></h3>
+<br>
+<p align="center"><img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="400" height="700"> </p>
 
 <br><br>
 ### License:

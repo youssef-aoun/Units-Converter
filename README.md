@@ -1,14 +1,13 @@
 # **Units Converter Android App**
-
+## Welcome to the Unit Converter Android App repository!<br><br>
 <img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/24aad5bf-9921-436b-89e5-1ed3c24a7b94" width="400" height="700">
 
-## Welcome to the Unit Converter Android App repository!<br><br>
-
+<br>
 This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.
 
 Built using Android Studio and Java language, this project leverages Adapters, Models, Fragments, Toolbars, XML, Clipboard Manager, Data Binding, and Shared Preferences to provide a seamless and user-friendly experience.
 
-
+<br>
 ### Features:
 
 1- Multi-category Unit Conversion: Quickly switch between different unit conversion categories to handle a wide range of measurement types.

@@ -1,5 +1,7 @@
 # **Units Converter Android App**
 
+<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/24aad5bf-9921-436b-89e5-1ed3c24a7b94" width="400" height="700">
+
 ## Welcome to the Unit Converter Android App repository!<br><br>
 
 This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.

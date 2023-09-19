@@ -4,8 +4,11 @@ Units Converter Android App
 
 
 Welcome to the Unit Converter Android App repository!
+
 This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.
+
 Built using Android Studio and Java language, this project leverages Adapters, Models, Fragments, Toolbars, XML, Clipboard Manager, Data Binding, and Shared Preferences to provide a seamless and user-friendly experience.
+
 
 Features:
 
@@ -18,6 +21,8 @@ Features:
 4- Shared Preferences: To keep track of your last conversions even on app shutdown.
 
 5- Clipboard Manager: Press on any unit and you will have the value of the unit after conversion copied to your clipboard.
+
+
 
 Categories Supported:
 
@@ -34,6 +39,7 @@ Categories Supported:
 6- Volume/Capacity: Convert between liters, gallons, milliliters, and other volume units.
 
 7- Weight/Mass: Convert between kilograms, pounds, grams, and other weight units.
+
 
 
 

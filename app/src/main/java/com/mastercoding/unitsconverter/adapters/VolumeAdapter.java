@@ -20,15 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsVolumeBinding;
 import com.mastercoding.unitsconverter.models.VolumeModelClass;
-import com.mastercoding.unitsconverter.models.VolumeModelClass;
 
 import java.util.ArrayList;
 
 public class VolumeAdapter extends RecyclerView.Adapter<VolumeAdapter.VolumeViewHolder> {
 
-    private ArrayList<VolumeModelClass> volumeModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<VolumeModelClass> volumeModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
             String selectedSpinner;
 
 
@@ -39,12 +38,7 @@ public class VolumeAdapter extends RecyclerView.Adapter<VolumeAdapter.VolumeView
         this.selectedSpinner = selectedSpinnerItem;
     }
 
-    public void updateData(String selectedItem) { // Updating the units
-        for (VolumeModelClass model : volumeModel) {
-            model.updateUnits(selectedItem, model.getVolumeInputValue());
-        }
-        notifyDataSetChanged();
-    }
+
 
     @NonNull
     @Override
@@ -133,7 +127,7 @@ public class VolumeAdapter extends RecyclerView.Adapter<VolumeAdapter.VolumeView
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextVolume(VolumeModelClass model, String unit){

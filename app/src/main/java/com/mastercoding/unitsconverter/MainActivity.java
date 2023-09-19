@@ -6,11 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 
 import com.mastercoding.unitsconverter.adapters.MeasurementsAdapter;
-import com.mastercoding.unitsconverter.fragments.Area;
 import com.mastercoding.unitsconverter.models.MeasurementsModel;
 
 import java.util.ArrayList;
@@ -18,10 +16,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    Context context;
 
     ArrayList<MeasurementsModel> models;
-    private Toolbar toolbar;
+
 
     MeasurementsAdapter adapter;
 
@@ -36,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar;
 
         //Toolbar
         toolbar = findViewById(R.id.toolbar); // Making a toolbar for the application

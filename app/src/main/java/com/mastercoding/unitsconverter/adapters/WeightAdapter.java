@@ -20,14 +20,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsWeightBinding;
 import com.mastercoding.unitsconverter.models.WeightModelClass;
-import com.mastercoding.unitsconverter.models.WeightModelClass;
 
 import java.util.ArrayList;
 
 public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.WeightViewHolder>{
-    private ArrayList<WeightModelClass> weightModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<WeightModelClass> weightModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
     public WeightAdapter(ArrayList<WeightModelClass> weightModel, Context context, String selectedSpinner) { // The Adapter constructor, takes ArrayList, context and spinner as parameters
@@ -36,12 +35,7 @@ public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.WeightView
         this.clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE); // For copying to clipboard
         this.selectedSpinner = selectedSpinner;
     }
-    private void weightUpdateData(String selectedItem){ // Updating the units
-        for (WeightModelClass model : weightModel) {
-            model.weightUpdateUnits(selectedItem, model.getWeightInputValue());
-        }
-        notifyDataSetChanged();
-    }
+
 
     @NonNull
     @Override
@@ -136,7 +130,7 @@ public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.WeightView
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextWeight(WeightModelClass model, String unit){

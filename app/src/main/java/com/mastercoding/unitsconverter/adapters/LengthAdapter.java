@@ -18,17 +18,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mastercoding.unitsconverter.R;
-import com.mastercoding.unitsconverter.databinding.ListOfUnitsAreaBinding;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsLengthBinding;
-import com.mastercoding.unitsconverter.models.AreaModelClass;
 import com.mastercoding.unitsconverter.models.LengthModelClass;
 
 import java.util.ArrayList;
 
 public class LengthAdapter extends RecyclerView.Adapter<LengthAdapter.LengthViewHolder>{
-    private ArrayList<LengthModelClass> lengthModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<LengthModelClass> lengthModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
     public LengthAdapter(ArrayList<LengthModelClass> lengthModel, Context context, String selectedSpinner) { // The Adapter constructor, takes ArrayList, context and spinner as parameters
@@ -36,13 +34,6 @@ public class LengthAdapter extends RecyclerView.Adapter<LengthAdapter.LengthView
         this.context = context;
         this.clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE); // For copying to clipboard
         this.selectedSpinner = selectedSpinner;
-    }
-
-    private void lengthUpdateData(String selectedItem){ // Updating the units
-        for (LengthModelClass model : lengthModel) {
-            model.lengthUpdateUnits(selectedItem, model.getInputValue());
-        }
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -134,7 +125,7 @@ public class LengthAdapter extends RecyclerView.Adapter<LengthAdapter.LengthView
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextLength(LengthModelClass model, String unit){

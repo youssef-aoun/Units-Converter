@@ -31,13 +31,13 @@ import java.util.ArrayList;
 public class MeasurementsAdapter extends RecyclerView.Adapter<MeasurementsAdapter.MyViewHolder> {
 
     public static ItemClickListener clickListener;
-    private ArrayList<MeasurementsModel> measurementsModels;
-    private Context context;
+    private final ArrayList<MeasurementsModel> measurementsModels;
+    private final Context context;
 
 
-    public void setClickListener(ItemClickListener clickListener) { // Setting a click listener that gets the view and position
+    /*public void setClickListener(ItemClickListener clickListener) { // Setting a click listener that gets the view and position
         this.clickListener = clickListener;
-    }
+    }*/
 
     public MeasurementsAdapter(ArrayList<MeasurementsModel> measurementsModels, Context context) {
         this.measurementsModels = measurementsModels;
@@ -46,7 +46,7 @@ public class MeasurementsAdapter extends RecyclerView.Adapter<MeasurementsAdapte
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView measurementName;
+        private final TextView measurementName;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,7 +57,7 @@ public class MeasurementsAdapter extends RecyclerView.Adapter<MeasurementsAdapte
         @Override
         public void onClick(View v) {
             if(clickListener != null)
-                clickListener.onClick(v, getAdapterPosition());
+                clickListener.onClick(v, getAbsoluteAdapterPosition());
         }
     }
 
@@ -90,7 +90,7 @@ public class MeasurementsAdapter extends RecyclerView.Adapter<MeasurementsAdapte
                 // Find the current fragment by its container ID
                 Fragment currentFragment = fragmentManager.findFragmentById(R.id.flContent);
 
-                    if (currentFragment != null) { // To avoid clicking on anything in the main page when a fragment is open
+                    if(currentFragment != null) { // To avoid clicking on anything in the main page when a fragment is open
 
                     } else {
                         switch (model.getName()) {

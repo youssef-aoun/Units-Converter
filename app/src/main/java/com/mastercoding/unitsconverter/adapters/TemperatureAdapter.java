@@ -19,15 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsTemperatureBinding;
-import com.mastercoding.unitsconverter.models.SpeedModelClass;
 import com.mastercoding.unitsconverter.models.TemperatureModelClass;
 
 import java.util.ArrayList;
 
 public class TemperatureAdapter extends RecyclerView.Adapter<TemperatureAdapter.TemperatureViewHolder>{
-    private ArrayList<TemperatureModelClass> temperatureModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<TemperatureModelClass> temperatureModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
 
@@ -37,12 +36,7 @@ public class TemperatureAdapter extends RecyclerView.Adapter<TemperatureAdapter.
         this.clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE); // For copying to clipboard
         this.selectedSpinner = selectedSpinner;
     }
-    private void temperatureUpdateData(String selectedItem){ // Updating the units
-        for (TemperatureModelClass model : temperatureModel) {
-            model.temperatureUpdateUnits(selectedItem, model.getTemperatureInputValue());
-        }
-        notifyDataSetChanged();
-    }
+
 
     @NonNull
     @Override
@@ -129,7 +123,7 @@ public class TemperatureAdapter extends RecyclerView.Adapter<TemperatureAdapter.
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextTemperature(TemperatureModelClass model, String unit){

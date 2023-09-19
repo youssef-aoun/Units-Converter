@@ -18,17 +18,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mastercoding.unitsconverter.R;
-import com.mastercoding.unitsconverter.databinding.ListOfUnitsLengthBinding;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsSpeedBinding;
-import com.mastercoding.unitsconverter.models.LengthModelClass;
 import com.mastercoding.unitsconverter.models.SpeedModelClass;
 
 import java.util.ArrayList;
 
 public class SpeedAdapter extends RecyclerView.Adapter<SpeedAdapter.SpeedViewHolder>{
-    private ArrayList<SpeedModelClass> speedModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<SpeedModelClass> speedModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
     public SpeedAdapter(ArrayList<SpeedModelClass> speedModel, Context context, String selectedSpinner) { // The Adapter constructor, takes ArrayList, context and spinner as parameters
@@ -37,12 +35,7 @@ public class SpeedAdapter extends RecyclerView.Adapter<SpeedAdapter.SpeedViewHol
         this.clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE); // For copying to clipboard
         this.selectedSpinner = selectedSpinner;
     }
-    private void speedUpdateData(String selectedItem){ // Updating the units
-        for (SpeedModelClass model : speedModel) {
-            model.speedUpdateUnits(selectedItem, model.getInputValue());
-        }
-        notifyDataSetChanged();
-    }
+
 
     @NonNull
     @Override
@@ -135,7 +128,7 @@ public class SpeedAdapter extends RecyclerView.Adapter<SpeedAdapter.SpeedViewHol
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextSpeed(SpeedModelClass model, String unit){

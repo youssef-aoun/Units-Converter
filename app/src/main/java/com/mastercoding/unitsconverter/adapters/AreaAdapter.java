@@ -25,9 +25,9 @@ import java.util.ArrayList;
 
 public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> {
 
-    private ArrayList<AreaModelClass> areaModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<AreaModelClass> areaModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
     public AreaAdapter(ArrayList<AreaModelClass> areaModel, Context context, String selectedSpinnerItem) { // The Adapter constructor, takes ArrayList, context and spinner as parameters
@@ -35,13 +35,6 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
         this.context = context;
         this.clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE); // For copying to clipboard
         this.selectedSpinner = selectedSpinnerItem;
-    }
-
-    public void updateData(String selectedItem) { // Updating the units
-        for (AreaModelClass model : areaModel) {
-            model.updateUnits(selectedItem, model.getInputValue());
-        }
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -133,7 +126,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     private void DisplaySavedTextArea(AreaModelClass model, String unit){

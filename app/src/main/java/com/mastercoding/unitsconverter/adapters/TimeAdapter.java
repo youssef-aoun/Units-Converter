@@ -19,16 +19,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.databinding.ListOfUnitsTimeBinding;
-import com.mastercoding.unitsconverter.models.TemperatureModelClass;
 import com.mastercoding.unitsconverter.models.TimeModelClass;
 
 import java.util.ArrayList;
 
 public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.TimeViewHolder> {
 
-    private ArrayList<TimeModelClass> timeModel;
-    private Context context;
-    private ClipboardManager clipboardManager;
+    private final ArrayList<TimeModelClass> timeModel;
+    private final Context context;
+    private final ClipboardManager clipboardManager;
     String selectedSpinner;
 
 
@@ -39,12 +38,7 @@ public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.TimeViewHolder
         this.selectedSpinner = selectedSpinner;
     }
 
-    private void timeUpdateData(String selectedItem){ // Updating the units
-        for (TimeModelClass model : timeModel) {
-            model.timeUpdateUnits(selectedItem, model.getTimeInputValue());
-        }
-        notifyDataSetChanged();
-    }
+
 
 
 
@@ -140,7 +134,7 @@ public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.TimeViewHolder
         SharedPreferences.Editor editor = preferences.edit();
         //String unitValue = Double.toString(inputValue);
         editor.putString(unit, inputValue);
-        editor.commit();
+        editor.apply();
     }
 
     public void DisplaySavedTextTime(TimeModelClass model, String unit){

@@ -1,16 +1,13 @@
-Units Converter Android App
+# **Units Converter Android App**
 
-
-
-
-Welcome to the Unit Converter Android App repository!
+## Welcome to the Unit Converter Android App repository!<br><br>
 
 This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.
 
 Built using Android Studio and Java language, this project leverages Adapters, Models, Fragments, Toolbars, XML, Clipboard Manager, Data Binding, and Shared Preferences to provide a seamless and user-friendly experience.
 
 
-Features:
+### Features:
 
 1- Multi-category Unit Conversion: Quickly switch between different unit conversion categories to handle a wide range of measurement types.
 
@@ -23,8 +20,8 @@ Features:
 5- Clipboard Manager: Press on any unit and you will have the value of the unit after conversion copied to your clipboard.
 
 
-
-Categories Supported:
+<br><br>
+### Categories Supported:
 
 1- Area: Convert between square meters, square feet, acres, and more.
 
@@ -42,8 +39,8 @@ Categories Supported:
 
 
 
-
-Getting Started:
+<br><br>
+### Getting Started:
 
 To get started with the Unit Converter Android App, follow these steps:
 
@@ -54,17 +51,17 @@ To get started with the Unit Converter Android App, follow these steps:
 3- Build and run the app on an Android emulator or a physical device.
 
 
-
-Screenshot from the Length fragment:
+<br><br>
+### Screenshot from the Length fragment:
 
 <img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="400" height="700">
 
-
-License:
+<br><br>
+### License:
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
-
-Contact:
+<br><br>
+### Contact:
 
 Have questions or suggestions? Feel free to reach out:
 

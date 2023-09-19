@@ -37,7 +37,6 @@ public class Area extends Fragment{
     ArrayList<AreaModelClass> areaModel;
 
     private FragmentAreaBinding fragmentAreaBinding;
-    AreaModelClass model;
 
 
     double km2 = 0.000001, acre = 0.000247105, ha = 0.0001, m2 = 1, cm2 = 10000, mm2 = 1000000, yd2 = 1.196, ft2 = 10.7639, in2 = 1550, mile2 = 0.000000386102;

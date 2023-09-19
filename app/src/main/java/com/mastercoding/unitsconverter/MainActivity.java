@@ -10,6 +10,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import com.mastercoding.unitsconverter.adapters.MeasurementsAdapter;
+import com.mastercoding.unitsconverter.fragments.Area;
 import com.mastercoding.unitsconverter.models.MeasurementsModel;
 
 import java.util.ArrayList;
@@ -24,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     MeasurementsAdapter adapter;
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar
         toolbar = findViewById(R.id.toolbar); // Making a toolbar for the application
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
 
         recyclerView = (RecyclerView) findViewById(R.id.listOfConversion); // Setting the list of measurements
 

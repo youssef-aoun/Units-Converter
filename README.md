@@ -1,6 +1,6 @@
 Units Converter Android App
 
-<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="100" height="100">
+<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="250" height="250">
 
 
 Welcome to the Unit Converter Android App repository!

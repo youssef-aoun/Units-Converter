@@ -1,6 +1,6 @@
 Units Converter Android App
 
-<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="400" height="700">
+
 
 
 Welcome to the Unit Converter Android App repository!
@@ -45,7 +45,7 @@ To get started with the Unit Converter Android App, follow these steps:
 
 Screenshot from the Length fragment:
 
-![Length Fragment](https://github.com/youssefaoun0/Units-Converter/assets/124771092/d45622aa-73e9-49c9-94f6-bd2353523c4d)
+<img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/7fc66f4f-bf48-486b-ae9b-9d6f7f80be82" width="400" height="700">
 
 
 License:

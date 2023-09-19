@@ -43,7 +43,7 @@ public class Area extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        fragmentAreaBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_area, container, false); // Has to be done instead of the view for the usage of databinding
+        fragmentAreaBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_area, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentAreaBinding.getRoot().clearFocus();
 
 

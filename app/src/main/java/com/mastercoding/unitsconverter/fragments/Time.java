@@ -2,13 +2,11 @@ package com.mastercoding.unitsconverter.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +20,6 @@ import com.mastercoding.unitsconverter.adapters.TimeAdapter;
 import com.mastercoding.unitsconverter.databinding.FragmentTimeBinding;
 import com.mastercoding.unitsconverter.models.TimeModelClass;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Time extends Fragment {
@@ -44,7 +41,7 @@ public class Time extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        fragmentTimeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_time, container, false); // Has to be done instead of the view for the usage of databinding
+        fragmentTimeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_time, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentTimeBinding.getRoot().clearFocus();
 
         ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner

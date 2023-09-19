@@ -16,10 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.mastercoding.unitsconverter.R;
-import com.mastercoding.unitsconverter.adapters.AreaAdapter;
 import com.mastercoding.unitsconverter.adapters.VolumeAdapter;
 import com.mastercoding.unitsconverter.databinding.FragmentVolumeBinding;
-import com.mastercoding.unitsconverter.models.AreaModelClass;
 import com.mastercoding.unitsconverter.models.VolumeModelClass;
 
 import java.util.ArrayList;
@@ -44,7 +42,7 @@ public class Volume extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        fragmentVolumeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_volume, container, false); // Has to be done instead of the view for the usage of databinding
+        fragmentVolumeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_volume, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentVolumeBinding.getRoot().clearFocus();
 
         ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner

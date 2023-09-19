@@ -8,8 +8,6 @@
         <variable
             name="speedModel"
             type="com.mastercoding.unitsconverter.models.SpeedModelClass" />
-
-
     </data>
 
 
@@ -22,6 +20,7 @@
 
 
         <Spinner
+            android:minHeight="48dp"
             android:id="@+id/speedUnitsSpinner"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -32,6 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:minHeight="48dp"
             android:id="@+id/speedEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

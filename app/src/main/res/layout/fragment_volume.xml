@@ -8,8 +8,6 @@
         <variable
             name="volumeModel"
             type="com.mastercoding.unitsconverter.models.VolumeModelClass" />
-
-
     </data>
 
 
@@ -22,6 +20,7 @@
 
 
         <Spinner
+            android:minHeight="48dp"
             android:id="@+id/volumeUnitsSpinner"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -32,6 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:minHeight="48dp"
             android:id="@+id/volumeEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

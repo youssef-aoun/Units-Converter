@@ -1,9 +1,5 @@
 package com.mastercoding.unitsconverter.models;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-
-import androidx.core.content.SharedPreferencesKt;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
@@ -15,7 +11,6 @@ public class AreaModelClass extends BaseObservable {
     String areaInputValue;
     String areaSymbols;
     Double areaUnitsValue;
-    Context context;
     double km2 = 0.000001, acre = 0.000247105, ha = 0.0001, m2 = 1, cm2 = 10000, mm2 = 1000000, yd2 = 1.196, ft2 = 10.7639, in2 = 1550, mile2 = 0.000000386102;
 
 
@@ -85,7 +80,7 @@ public class AreaModelClass extends BaseObservable {
             afterTrim = givenValue.substring(1);
             signChecker = true;
         }
-        if(signChecker == true){
+        if(signChecker){
             valueGiven = Double.parseDouble(afterTrim);
             valueGiven *= -1;
         }

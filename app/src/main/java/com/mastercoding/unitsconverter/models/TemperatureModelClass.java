@@ -12,7 +12,7 @@ public class TemperatureModelClass extends BaseObservable {
     Double temperatureUnitsValue;
     boolean signChecker = false; // checking whether the input is negative or positive, (true for negative).
 
-    double celsius = 0, fahrenheit = 32, kelvin = 273.15, rankine = 491.67;
+    double celsius = 0, kelvin = 273.15;
 
 
     public TemperatureModelClass(String temperatureUnits, String temperatureSymbols, String temperatureInputValue,  Double temperatureUnitsValue) {
@@ -92,7 +92,7 @@ public class TemperatureModelClass extends BaseObservable {
             afterTrim = givenValue.substring(1);
             signChecker = true;
         }
-        if(signChecker == true){
+        if(signChecker){
             valueGiven = Double.parseDouble(afterTrim);
             valueGiven *= -1;
         }

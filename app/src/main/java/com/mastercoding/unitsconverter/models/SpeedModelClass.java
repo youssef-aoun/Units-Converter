@@ -81,7 +81,7 @@ public class SpeedModelClass extends BaseObservable {
             afterTrim = givenValue.substring(1);
             signChecker = true;
         }
-        if(signChecker == true){
+        if(signChecker){
             valueGiven = Double.parseDouble(afterTrim);
             valueGiven *= -1;
         }

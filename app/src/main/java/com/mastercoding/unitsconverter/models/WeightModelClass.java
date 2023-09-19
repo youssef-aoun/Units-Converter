@@ -3,8 +3,6 @@ package com.mastercoding.unitsconverter.models;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
-import com.mastercoding.unitsconverter.BR;
-import com.mastercoding.unitsconverter.fragments.Weight;
 
 public class WeightModelClass extends BaseObservable {
 

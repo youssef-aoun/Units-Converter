@@ -15,14 +15,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mastercoding.unitsconverter.adapters.fragments.Temperature;
-import com.mastercoding.unitsconverter.adapters.fragments.Time;
-import com.mastercoding.unitsconverter.adapters.fragments.Volume;
-import com.mastercoding.unitsconverter.adapters.fragments.Weight;
-import com.mastercoding.unitsconverter.adapters.fragments.Area;
+import com.mastercoding.unitsconverter.fragments.Temperature;
+import com.mastercoding.unitsconverter.fragments.Time;
+import com.mastercoding.unitsconverter.fragments.Volume;
+import com.mastercoding.unitsconverter.fragments.Weight;
+import com.mastercoding.unitsconverter.fragments.Area;
 import com.mastercoding.unitsconverter.R;
-import com.mastercoding.unitsconverter.adapters.fragments.Length;
-import com.mastercoding.unitsconverter.adapters.fragments.Speed;
+import com.mastercoding.unitsconverter.fragments.Length;
+import com.mastercoding.unitsconverter.fragments.Speed;
 import com.mastercoding.unitsconverter.interfaces.ItemClickListener;
 import com.mastercoding.unitsconverter.models.MeasurementsModel;
 

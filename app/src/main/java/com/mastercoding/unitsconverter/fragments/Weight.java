@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.adapters.fragments;
+package com.mastercoding.unitsconverter.fragments;
 
 import static android.R.layout.simple_spinner_item;
 

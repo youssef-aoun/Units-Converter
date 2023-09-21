@@ -99,6 +99,9 @@ public class TimeModelClass extends BaseObservable {
             case "millisecond":
                 valueGiven /= millisecond;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

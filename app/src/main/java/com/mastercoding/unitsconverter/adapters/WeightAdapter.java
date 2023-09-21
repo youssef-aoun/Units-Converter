@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -95,6 +96,7 @@ public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.WeightView
 
             weightEditText.setFilters(inputFilters);
 
+
             weightEditText.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -103,9 +105,11 @@ public class WeightAdapter extends RecyclerView.Adapter<WeightAdapter.WeightView
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) { // Updating the units according to the change in text and the spinner selected
-                    model.weightUpdateUnits(selectedSpinner, s.toString());
-                    SaveText(model.getWeightInputValue(), model.getWeightSymbols());
-                    notifyDataSetChanged();
+
+                        model.weightUpdateUnits(selectedSpinner, s.toString());
+                        SaveText(model.getWeightInputValue(), model.getWeightSymbols());
+                        notifyDataSetChanged();
+
                 }
 
                 @Override

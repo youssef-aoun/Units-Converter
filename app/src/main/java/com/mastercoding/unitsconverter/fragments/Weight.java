@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.mastercoding.unitsconverter.R;
 import com.mastercoding.unitsconverter.adapters.WeightAdapter;
@@ -61,15 +63,12 @@ public class Weight extends Fragment {
                 fragmentWeightBinding.weightList.setHasFixedSize(true);
                 fragmentWeightBinding.weightList.setLayoutManager(new LinearLayoutManager(getContext()));
                 fragmentWeightBinding.weightList.setAdapter(adapter);
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
-
 
         weightModel = new ArrayList<>(); // Making the arraylist of units
 

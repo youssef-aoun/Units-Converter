@@ -117,6 +117,9 @@ public class AreaModelClass extends BaseObservable {
             case "mile^2":
                 valueGiven /= mile2;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

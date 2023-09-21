@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -101,6 +102,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     model.updateUnits(selectedSpinner, s.toString()); // Updating the units according to the change in text and the spinner selected
+
                     SaveText(model.getInputValue(), model.getAreaSymbols());
                     notifyDataSetChanged();
                 }

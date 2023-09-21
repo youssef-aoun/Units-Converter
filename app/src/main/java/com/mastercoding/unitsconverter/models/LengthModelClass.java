@@ -136,6 +136,9 @@ public class LengthModelClass extends BaseObservable {
             case "mile":
                 valueGiven /= mile;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

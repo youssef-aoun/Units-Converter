@@ -106,6 +106,9 @@ public class WeightModelClass extends BaseObservable {
             case "ton":
                 valueGiven /= ton;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

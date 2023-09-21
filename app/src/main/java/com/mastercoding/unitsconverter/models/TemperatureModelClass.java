@@ -111,6 +111,9 @@ public class TemperatureModelClass extends BaseObservable {
             case "rankine":
                 valueGiven = (valueGiven-491.67)/1.8;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

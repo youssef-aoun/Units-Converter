@@ -109,6 +109,9 @@ public class VolumeModelClass extends BaseObservable {
             case "tspn":
                 valueGiven /= tspn;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

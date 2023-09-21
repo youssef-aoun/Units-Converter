@@ -136,6 +136,9 @@ public class SpeedModelClass extends BaseObservable {
             case "mm/s":
                 valueGiven /= mms;
                 break;
+            default:
+                valueGiven = 0;
+                break;
         }
         return valueGiven;
     }

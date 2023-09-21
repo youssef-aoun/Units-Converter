@@ -79,7 +79,7 @@ public class Speed extends Fragment {
 
         speedModel.add(new SpeedModelClass("Kilometers per Hour\t", "km/h","3.6",  kmh));
         speedModel.add(new SpeedModelClass("Mile per Hour\t", "mile/h", "2.2369363", mileh));
-        speedModel.add(new SpeedModelClass("Know\t", "knot","1.9438445", knot));
+        speedModel.add(new SpeedModelClass("Knot\t", "knot","1.9438445", knot));
         speedModel.add(new SpeedModelClass("Centimeter per Hour\t", "cm/h","360000", cmh));
         speedModel.add(new SpeedModelClass("Centimeter per Minute\t", "cm/min", "6000",cmmin));
         speedModel.add(new SpeedModelClass("Centimeter per Second\t", "cm/s","100", cms));

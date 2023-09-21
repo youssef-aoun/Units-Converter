@@ -39,7 +39,7 @@ public class Length extends Fragment {
 
 
     double  km = 0.001, m = 1, cm = 100, mm = 1000, yd = 1.093613298, ft = 3.280839895, in = 39.37007874, mile = 0.00062137,
-            nmi = 0.000539956, decimeter = 10;
+            nmi = 0.000539956, dm = 10;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -85,8 +85,8 @@ public class Length extends Fragment {
        lengthModel.add(new LengthModelClass("Foot\t", "ft", "3.280839895",ft));
        lengthModel.add(new LengthModelClass("Inch\t", "in","39.37007874", in));
        lengthModel.add(new LengthModelClass("Yard\t", "yd","1.093613298", yd));
-       lengthModel.add(new LengthModelClass("Acre\t", "nmi", "0.000539956", nmi));
-       lengthModel.add(new LengthModelClass("Decimeter\t", "decimeter","10", decimeter));
+       lengthModel.add(new LengthModelClass("Nautical Mile\t", "nmi", "0.000539956", nmi));
+       lengthModel.add(new LengthModelClass("Decimeter\t", "dm","10", dm));
 
 
        fragmentLengthBinding.setLifecycleOwner(this);

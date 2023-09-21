@@ -13,7 +13,7 @@ public class LengthModelClass extends BaseObservable {
     Double lengthUnitsValue;
     boolean signChecker = false;  // checking whether the input is negative or positive, (true for negative).
     double  km = 0.001, m = 1, cm = 100, mm = 1000, yd = 1.093613298, ft = 3.280839895, in = 39.37007874, mile = 0.00062137,
-            nmi = 0.000539956, angstrom = 1000000000, barleyCorn = 118.1102362, bolt = 0.0273403, cable = 0.004556722, chain = 0.0497097, cubit = 2.187226597, decimeter = 10;
+            nmi = 0.000539956, angstrom = 1000000000, barleyCorn = 118.1102362, bolt = 0.0273403, cable = 0.004556722, chain = 0.0497097, cubit = 2.187226597, dm = 10;
 
     public LengthModelClass(String lengthUnits, String lengthSymbols, String inputValue, Double lengthUnitsValue) {
         this.lengthUnits = lengthUnits;
@@ -130,8 +130,8 @@ public class LengthModelClass extends BaseObservable {
             case "cubit":
                 valueGiven /= cubit;
                 break;
-            case "decimeter":
-                valueGiven /= decimeter;
+            case "dm":
+                valueGiven /= dm;
                 break;
             case "mile":
                 valueGiven /= mile;

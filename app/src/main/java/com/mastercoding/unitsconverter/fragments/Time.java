@@ -75,7 +75,7 @@ public class Time extends Fragment {
 
         timeModel.add(new TimeModelClass("Day\t", "day", "0.041666667", day));
         timeModel.add(new TimeModelClass("Minute\t", "min", "60", minute));
-        timeModel.add(new TimeModelClass("hour\t", "hour", "1", hour));
+        timeModel.add(new TimeModelClass("Hour\t", "hour", "1", hour));
         timeModel.add(new TimeModelClass("Second\t", "sec", "3600", second));
         timeModel.add(new TimeModelClass("Week\t", "week", "0.005952381", week));
         timeModel.add(new TimeModelClass("Year\t", "year", "0.00011408", year));

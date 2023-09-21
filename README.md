@@ -46,10 +46,7 @@ Built using Android Studio and Java language, this project leverages Adapters, M
 
 To get started with the Unit Converter Android App, follow these steps:
 
-1- Clone this repository to your local machine using git clone <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
-  Copy path
-</clipboard-copy>
-
+1- Clone this repository to your local machine using git clone 
 2- Open the project in Android Studio.
 
 3- Build and run the app on an Android emulator or a physical device.

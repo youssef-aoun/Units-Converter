@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -20,6 +20,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentAreaBinding;
 import com.mastercoding.unitsconverter.models.AreaModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Area extends Fragment{
 
@@ -47,22 +48,13 @@ public class Area extends Fragment{
         fragmentAreaBinding.getRoot().clearFocus();
 
 
-        ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
-        arrayListFrom.add("m^2");
-        arrayListFrom.add("cm^2");
-        arrayListFrom.add("mm^2");
-        arrayListFrom.add("km^2");
-        arrayListFrom.add("mile^2");
-        arrayListFrom.add("ft^2");
-        arrayListFrom.add("in^2");
-        arrayListFrom.add("yd^2");
-        arrayListFrom.add("acre");
-        arrayListFrom.add("ha");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.area)));
 
         spinnerFrom = (Spinner) fragmentAreaBinding.areaUnitsSpinner; // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
             @Override

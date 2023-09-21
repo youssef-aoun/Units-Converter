@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -21,6 +21,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentTimeBinding;
 import com.mastercoding.unitsconverter.models.TimeModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Time extends Fragment {
 
@@ -33,7 +34,7 @@ public class Time extends Fragment {
     String selectedSpinnerItem = "";
 
     double minute = 60, hour = 1, second = 3600, week = 0.005952381, year = 0.00011408, century = 0.00000114079552, decade = 0.0000114079552,
-            millisecond = 3000000, microsecond = 360000000*10;
+            millisecond = 3000000;
 
     double day = hour/24;
 
@@ -44,23 +45,13 @@ public class Time extends Fragment {
         fragmentTimeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_time, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentTimeBinding.getRoot().clearFocus();
 
-        ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
-
-        arrayListFrom.add("day");
-        arrayListFrom.add("minute");
-        arrayListFrom.add("hour");
-        arrayListFrom.add("second");
-        arrayListFrom.add("week");
-        arrayListFrom.add("year");
-        arrayListFrom.add("century");
-        arrayListFrom.add("decade");
-        arrayListFrom.add("millisecond");
-        arrayListFrom.add("microsecond");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.time)));
 
         spinnerFrom = (Spinner) fragmentTimeBinding.timeUnitsSpinner;  // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
             @Override
@@ -91,7 +82,6 @@ public class Time extends Fragment {
         timeModel.add(new TimeModelClass("Century\t", "century", "0.00000114079552", century));
         timeModel.add(new TimeModelClass("Decade\t", "decade", "0.0000114079552", decade));
         timeModel.add(new TimeModelClass("Millisecond\t", "millisecond", "3000000", millisecond));
-        timeModel.add(new TimeModelClass("Microsecond\t", "microsecond", "3600000000", microsecond));
 
         fragmentTimeBinding.setLifecycleOwner(this);
         // Inflate the layout for this fragment

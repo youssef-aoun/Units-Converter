@@ -12,8 +12,7 @@ public class WeightModelClass extends BaseObservable {
     Double weightUnitsValue;
 
     double g = 1000, kg = 1, lb = 2.2046226, oz = 35.273962, carat = 5000, dram = 564.3833912, mg = 1000000, dwt = 643.0147943, grain = 15432.35835,
-            ton = 0.001, tonUK = 0.0009842065276, tonUS = 0.001102311, cwtUK = 0.019684131, cwtUS = 0.022046226, lbTROY = 2.679228309, ozTROY = 32.15073971,
-            st = 0.157473044, slug = 0.068521766;
+            ton = 0.001;
 
 
     public WeightModelClass(String weightUnits, String weightSymbols, String weightInputValue, Double weightUnitsValue) {
@@ -106,30 +105,6 @@ public class WeightModelClass extends BaseObservable {
                 break;
             case "ton":
                 valueGiven /= ton;
-                break;
-            case "tonUK":
-                valueGiven /= tonUK;
-                break;
-            case "tonUS":
-                valueGiven /= tonUS;
-                break;
-            case "cwtUK":
-                valueGiven /= cwtUK;
-                break;
-            case "cwtUS":
-                valueGiven /= cwtUS;
-                break;
-            case "lbTROY":
-                valueGiven /= lbTROY;
-                break;
-            case "ozTROY":
-                valueGiven /= ozTROY;
-                break;
-            case "st":
-                valueGiven /= st;
-                break;
-            case "slug":
-                valueGiven /= slug;
                 break;
         }
         return valueGiven;

@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -20,6 +20,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentWeightBinding;
 import com.mastercoding.unitsconverter.models.WeightModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Weight extends Fragment {
 
@@ -34,8 +35,7 @@ public class Weight extends Fragment {
     private FragmentWeightBinding fragmentWeightBinding;
 
     double g = 1000, kg = 1, lb = 2.2046226, oz = 35.273962, carat = 5000, dram = 564.3833912, mg = 1000000, dwt = 643.0147943, grain = 15432.35835,
-            ton = 0.001, tonUK = 0.0009842065276, tonUS = 0.001102311, cwtUK = 0.019684131, cwtUS = 0.022046226, lbTROY = 2.679228309, ozTROY = 32.15073971,
-            st = 0.157473044, slug = 0.068521766;
+            ton = 0.001;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,31 +44,13 @@ public class Weight extends Fragment {
         fragmentWeightBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_weight, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentWeightBinding.getRoot().clearFocus();
 
-        ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
-
-        arrayListFrom.add("g");
-        arrayListFrom.add("kg");
-        arrayListFrom.add("lb");
-        arrayListFrom.add("oz");
-        arrayListFrom.add("carat");
-        arrayListFrom.add("dram");
-        arrayListFrom.add("mg");
-        arrayListFrom.add("dwt");
-        arrayListFrom.add("grain");
-        arrayListFrom.add("ton");
-        arrayListFrom.add("tonUK");
-        arrayListFrom.add("tonUS");
-        arrayListFrom.add("cwtUK");
-        arrayListFrom.add("cwtUS");
-        arrayListFrom.add("lbTROY");
-        arrayListFrom.add("ozTROY");
-        arrayListFrom.add("st");
-        arrayListFrom.add("slug");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.weight)));
 
         spinnerFrom = (Spinner) fragmentWeightBinding.weightUnitsSpinner;  // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
@@ -101,15 +83,6 @@ public class Weight extends Fragment {
         weightModel.add(new WeightModelClass("Pennyweight\t", "dwt", "dwt", dwt));
         weightModel.add(new WeightModelClass("Grain\t", "grain", "grain", grain));
         weightModel.add(new WeightModelClass("Metric ton\t", "ton", "ton", ton));
-        weightModel.add(new WeightModelClass("Long ton (UK)\t", "ton (UK)", "ton (UK)", tonUK));
-        weightModel.add(new WeightModelClass("Short ton (US)\t", "ton (US)", "ton (US)", tonUS));
-        weightModel.add(new WeightModelClass("Long hundredweight (UK)\t", "cwt (UK)", "cwt (UK)", cwtUK));
-        weightModel.add(new WeightModelClass("Short hundredweight (US)\t", "cwt (US)", "cwt (US)", cwtUS));
-        weightModel.add(new WeightModelClass("Pound (Troy)\t", "lb (Troy)", "lb (Troy)", lbTROY));
-        weightModel.add(new WeightModelClass("Ounce (Troy)\t", "oz (Troy)", "oz (Troy)", ozTROY));
-        weightModel.add(new WeightModelClass("Stone\t", "st", "st", st));
-        weightModel.add(new WeightModelClass("Slug\t", "slug", "slug", slug));
-
 
         fragmentWeightBinding.setLifecycleOwner(this);
 

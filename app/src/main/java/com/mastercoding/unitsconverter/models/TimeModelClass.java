@@ -12,7 +12,7 @@ public class TimeModelClass extends BaseObservable {
     Double timeUnitsValue;
 
     double minute = 60, hour = 1, second = 3600, week = 0.005952381, year = 0.00011408, century = 0.00000114079552, decade = 0.0000114079552,
-            millisecond = 3000000, microsecond = 360000000*10;
+            millisecond = 3000000;
     double day = hour/24;
 
     public TimeModelClass(String timeUnits, String timeSymbols,  String timeInputValue, Double timeUnitsValue) {
@@ -98,9 +98,6 @@ public class TimeModelClass extends BaseObservable {
                 break;
             case "millisecond":
                 valueGiven /= millisecond;
-                break;
-            case "microsecond":
-                valueGiven /= microsecond;
                 break;
         }
         return valueGiven;

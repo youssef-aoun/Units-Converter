@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -21,6 +21,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentSpeedBinding;
 import com.mastercoding.unitsconverter.models.SpeedModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Speed extends Fragment {
 
@@ -47,29 +48,13 @@ public class Speed extends Fragment {
         fragmentSpeedBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_speed, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentSpeedBinding.getRoot().clearFocus();
 
-        ArrayList<String> arrayListFrom = new ArrayList<>();  // Filling an arraylist of strings that will be put in a spinner
-
-        arrayListFrom.add("m/s");
-        arrayListFrom.add("km/h");
-        arrayListFrom.add("mile/h");
-        arrayListFrom.add("knot");
-        arrayListFrom.add("cm/h");
-        arrayListFrom.add("cm/min");
-        arrayListFrom.add("cm/s");
-        arrayListFrom.add("ft/h");
-        arrayListFrom.add("ft/min");
-        arrayListFrom.add("ft/s");
-        arrayListFrom.add("in/h");
-        arrayListFrom.add("in/min");
-        arrayListFrom.add("in/s");
-        arrayListFrom.add("m/h");
-        arrayListFrom.add("m/min");
-        arrayListFrom.add("mm/s");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.speed)));
 
         spinnerFrom = (Spinner) fragmentSpeedBinding.speedUnitsSpinner; // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner

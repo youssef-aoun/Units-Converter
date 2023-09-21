@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -21,6 +21,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentLengthBinding;
 import com.mastercoding.unitsconverter.models.LengthModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Length extends Fragment {
 
@@ -38,7 +39,7 @@ public class Length extends Fragment {
 
 
     double  km = 0.001, m = 1, cm = 100, mm = 1000, yd = 1.093613298, ft = 3.280839895, in = 39.37007874, mile = 0.00062137,
-            nmi = 0.000539956, angstrom = 1000000000, barleyCorn = 118.1102362, bolt = 0.0273403, cable = 0.004556722, chain = 0.0497097, cubit = 2.187226597, decimeter = 10;
+            nmi = 0.000539956, decimeter = 10;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,27 +50,12 @@ public class Length extends Fragment {
 
         ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
 
-        arrayListFrom.add("m");
-        arrayListFrom.add("cm");
-        arrayListFrom.add("mm");
-        arrayListFrom.add("km");
-        arrayListFrom.add("mile");
-        arrayListFrom.add("ft");
-        arrayListFrom.add("in");
-        arrayListFrom.add("yd");
-        arrayListFrom.add("nmi");
-        arrayListFrom.add("angstrom");
-        arrayListFrom.add("barleyCorn");
-        arrayListFrom.add("bolt");
-        arrayListFrom.add("cable");
-        arrayListFrom.add("chain");
-        arrayListFrom.add("cubit");
-        arrayListFrom.add("decimeter");
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.length)));
 
         spinnerFrom = (Spinner) fragmentLengthBinding.lengthUnitsSpinner; // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
             @Override
@@ -100,12 +86,6 @@ public class Length extends Fragment {
        lengthModel.add(new LengthModelClass("Inch\t", "in","39.37007874", in));
        lengthModel.add(new LengthModelClass("Yard\t", "yd","1.093613298", yd));
        lengthModel.add(new LengthModelClass("Acre\t", "nmi", "0.000539956", nmi));
-       lengthModel.add(new LengthModelClass("Angstrom\t", "angstrom","1000000000", angstrom));
-       lengthModel.add(new LengthModelClass("BarleyCorn\t", "barleyCorn","118.1102362", barleyCorn));
-       lengthModel.add(new LengthModelClass("Bolt\t", "bolt","0.0273403", bolt));
-       lengthModel.add(new LengthModelClass("Cable\t", "cable","0.004556722", cable));
-       lengthModel.add(new LengthModelClass("Chain\t", "chain","0.0497097", chain));
-       lengthModel.add(new LengthModelClass("Cubit\t", "cubit","2.187226597", cubit));
        lengthModel.add(new LengthModelClass("Decimeter\t", "decimeter","10", decimeter));
 
 

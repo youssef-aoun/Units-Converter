@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -21,6 +21,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentVolumeBinding;
 import com.mastercoding.unitsconverter.models.VolumeModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Volume extends Fragment {
 
@@ -34,9 +35,7 @@ public class Volume extends Fragment {
 
     private FragmentVolumeBinding fragmentVolumeBinding;
 
-    double m3 = 1, l = 1000, cm3 = 1000000, ml = 1000000, mm3 = 1000000000, tblspn = 66666.66667, tspn = 200000, ft3 = 35.31466672, in3 = 61023.74409, yd3 = 1.307950619,
-            usBarrel = 6.28981077, usGallon = 264.1720524, usDryGallon = 227.0207461, usFlOz = 33814.0227, usTblspn = 202884.1362, usTspn = 202884.1362,
-            ukBarrel = 6.1103, ukGallon = 219.9692483, ukFlOz = 35195.07973;
+    double m3 = 1, l = 1000, cm3 = 1000000, ml = 1000000, mm3 = 1000000000, tblspn = 66666.66667, tspn = 200000, ft3 = 35.31466672, in3 = 61023.74409, yd3 = 1.307950619;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,31 +44,13 @@ public class Volume extends Fragment {
         fragmentVolumeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_volume, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentVolumeBinding.getRoot().clearFocus();
 
-        ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
-        arrayListFrom.add("m^3");
-        arrayListFrom.add("l");
-        arrayListFrom.add("ml");
-        arrayListFrom.add("cm^3");
-        arrayListFrom.add("mm^3");
-        arrayListFrom.add("yd^3");
-        arrayListFrom.add("ft^3");
-        arrayListFrom.add("in^3");
-        arrayListFrom.add("tblspn");
-        arrayListFrom.add("tspn");
-        arrayListFrom.add("US Barrel");
-        arrayListFrom.add("US Gallon");
-        arrayListFrom.add("US Dry Gallon");
-        arrayListFrom.add("US Fl Oz");
-        arrayListFrom.add("US tblspn");
-        arrayListFrom.add("US tspn");
-        arrayListFrom.add("UK Barrel");
-        arrayListFrom.add("UK Gallon");
-        arrayListFrom.add("UK Fl Oz");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.volume)));
 
         spinnerFrom = (Spinner) fragmentVolumeBinding.volumeUnitsSpinner; // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
             @Override
@@ -99,15 +80,6 @@ public class Volume extends Fragment {
         volumeModel.add(new VolumeModelClass("Cubic Inch\t", "61023.74409","in^3", in3));
         volumeModel.add(new VolumeModelClass("Tablespoon (Metric)\t", "66666.66667", "tblspn", tblspn));
         volumeModel.add(new VolumeModelClass("Teaspoon (Metric)\t", "200000","tspn", tspn));
-        volumeModel.add(new VolumeModelClass("US Barrel\t", "6.28981077","US Barrel", usBarrel));
-        volumeModel.add(new VolumeModelClass("US Gallon\t", "264.1720524","US Gallon", usGallon));
-        volumeModel.add(new VolumeModelClass("US Dry Gallon\t", "227.0207461","US Dry Gallon", usDryGallon));
-        volumeModel.add(new VolumeModelClass("US Fluid Ounce\t", "33814.0227","US Fl Oz", usFlOz));
-        volumeModel.add(new VolumeModelClass("US Tablespoon\t", "202884.1362","US tblspn", usTblspn));
-        volumeModel.add(new VolumeModelClass("US Teaspoon\t", "202884.1362","US tspn", usTspn));
-        volumeModel.add(new VolumeModelClass("UK Barrel\t", "6.1103","UK Barrel", ukBarrel));
-        volumeModel.add(new VolumeModelClass("UK Gallon\t", "219.9692483","UK Gallon", ukGallon));
-        volumeModel.add(new VolumeModelClass("UK Fluid Ounce\t", "35195.07973","UK Fl Oz", ukFlOz));
 
 
         fragmentVolumeBinding.setLifecycleOwner(this);

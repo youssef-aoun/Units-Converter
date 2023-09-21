@@ -2,4 +2,95 @@
     <string name="app_name">Units Converter</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="area">
+        <item>m^2"</item>
+        <item>cm^2</item>
+        <item>mm^2</item>
+        <item>km^2</item>
+        <item>mile^2</item>
+        <item>ft^2</item>
+        <item>in^2</item>
+        <item>yd^2</item>
+        <item>acre</item>
+        <item>ha</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>km</item>
+        <item>mile</item>
+        <item>ft</item>
+        <item>in</item>
+        <item>yd</item>
+        <item>nmi</item>
+        <item>decimeter</item>
+    </string-array>
+
+    <string-array name="speed">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mile/h</item>
+        <item>knot</item>
+        <item>cm/h</item>
+        <item>cm/min</item>
+        <item>cm/s</item>
+        <item>ft/h</item>
+        <item>ft/min</item>
+        <item>ft/s</item>
+        <item>in/h</item>
+        <item>in/min</item>
+        <item>in/s</item>
+        <item>m/h</item>
+        <item>m/min</item>
+        <item>mm/s</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>celsius</item>
+        <item>fahrenheit</item>
+        <item>kelvin"</item>
+        <item>rankine</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>day</item>
+        <item>minute</item>
+        <item>hour</item>
+        <item>second</item>
+        <item>week</item>
+        <item>year</item>
+        <item>century</item>
+        <item>decade</item>
+        <item>millisecond</item>
+    </string-array>
+
+    <string-array name="volume">
+        <item>m^3</item>
+        <item>l</item>
+        <item>ml</item>
+        <item>cm^3</item>
+        <item>mm^3</item>
+        <item>yd^3</item>
+        <item>ft^3</item>
+        <item>in^3</item>
+        <item>tblspn</item>
+        <item>tspn</item>
+    </string-array>
+
+    <string-array name="weight">
+        <item>g</item>
+        <item>kg</item>
+        <item>lb</item>
+        <item>oz</item>
+        <item>carat</item>
+        <item>dram</item>
+        <item>mg</item>
+        <item>dwt</item>
+        <item>grain</item>
+        <item>ton</item>
+    </string-array>
+
 </resources>

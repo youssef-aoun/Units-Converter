@@ -1,4 +1,4 @@
-package com.mastercoding.unitsconverter.fragments;
+package com.mastercoding.unitsconverter.adapters.fragments;
 
 import static android.R.layout.simple_spinner_item;
 
@@ -20,6 +20,7 @@ import com.mastercoding.unitsconverter.databinding.FragmentTemperatureBinding;
 import com.mastercoding.unitsconverter.models.TemperatureModelClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Temperature extends Fragment {
 
@@ -41,17 +42,13 @@ public class Temperature extends Fragment {
         fragmentTemperatureBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_temperature, container, false); // Has to be done instead of the view for the usage of data binding
         fragmentTemperatureBinding.getRoot().clearFocus();
 
-        ArrayList<String> arrayListFrom = new ArrayList<>(); // Filling an arraylist of strings that will be put in a spinner
-
-        arrayListFrom.add("celsius");
-        arrayListFrom.add("fahrenheit");
-        arrayListFrom.add("kelvin");
-        arrayListFrom.add("rankine");
+        ArrayList<String> arrayListFrom = new ArrayList<>();
+        arrayListFrom.addAll(Arrays.asList(getResources().getStringArray(R.array.temperature)));
 
         spinnerFrom = (Spinner) fragmentTemperatureBinding.temperatureUnitsSpinner; // Getting the adapter from the xml
-        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), simple_spinner_item, arrayListFrom);
+        ArrayAdapter<String> arrayAdapterFrom = new ArrayAdapter<>(getContext(), R.layout.dropdown_item, arrayListFrom);
         spinnerFrom.setAdapter(arrayAdapterFrom); // setting the adapter for the spinner
-        arrayAdapterFrom.setDropDownViewResource(simple_spinner_item);
+        arrayAdapterFrom.setDropDownViewResource(R.layout.dropdown_item);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() { // Getting the item selected in the spinner
             @Override

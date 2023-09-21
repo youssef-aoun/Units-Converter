@@ -12,9 +12,7 @@ public class VolumeModelClass extends BaseObservable {
     String volumeSymbols;
     Double volumeUnitsValue;
 
-    double m3 = 1, l = 1000, cm3 = 1000000, ml = 1000000, mm3 = 1000000000, tblspn = 66666.66667, tspn = 200000, ft3 = 35.31466672, in3 = 61023.74409, yd3 = 1.307950619,
-            usBarrel = 6.28981077, usGallon = 264.1720524, usDryGallon = 227.0207461, usFlOz = 33814.0227, usTblspn = 202884.1362, usTspn = 202884.1362,
-            ukBarrel = 6.1103, ukGallon = 219.9692483, ukFlOz = 35195.07973;
+    double m3 = 1, l = 1000, cm3 = 1000000, ml = 1000000, mm3 = 1000000000, tblspn = 66666.66667, tspn = 200000, ft3 = 35.31466672, in3 = 61023.74409, yd3 = 1.307950619;
 
 
     public VolumeModelClass(String volumeUnits, String volumeInputValue, String volumeSymbols, Double volumeUnitsValue) {
@@ -111,34 +109,6 @@ public class VolumeModelClass extends BaseObservable {
             case "tspn":
                 valueGiven /= tspn;
                 break;
-            case "US Barrel":
-                valueGiven /= usBarrel;
-                break;
-            case "US Gallon":
-                valueGiven /= usGallon;
-                break;
-            case "US Dry Gallon":
-                valueGiven /= usDryGallon;
-                break;
-            case "US Fl Oz":
-                valueGiven /= usFlOz;
-                break;
-            case "US tblspn":
-                valueGiven /= usTblspn;
-                break;
-            case "US tspn":
-                valueGiven /= usTspn;
-                break;
-            case "UK Barrel":
-                valueGiven /= ukBarrel;
-                break;
-            case "UK Gallon":
-                valueGiven /= ukGallon;
-                break;
-            case "UK Fl Oz":
-                valueGiven /= ukFlOz;
-                break;
-
         }
         return valueGiven;
     }

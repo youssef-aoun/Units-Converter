@@ -2,7 +2,9 @@
 
 <h2><p align="center"><B>Welcome to the Unit Converter Android App repository!</B></p></h2>
 
-<p align="center"><img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/24aad5bf-9921-436b-89e5-1ed3c24a7b94" width="400" height="700"></p>
+<p align="center">
+  <img src="https://github.com/youssef-aoun/Units-Converter/assets/124771092/185ebc77-b9a2-47df-883b-a46c2099e327" width="300" height="700">
+</p>
 
 <br><be>
 <p>This versatile mobile application allows you to effortlessly convert units across various categories, including Area, Length/Distance, Temperature, Time, Velocity/Speed, Volume/Capacity, and Weight/Mass.<br><br>
@@ -54,8 +56,11 @@ To get started with the Unit Converter Android App, follow these steps:
 <br><br>
 <h3><p align="center">Screenshots from the Length fragment:</p></h3>
 <br>
-<p align="center"><img src="https://github.com/youssef-aoun/Units-Converter/assets/124771092/4e624c3f-abb8-405b-b030-da126a53aa78" width="450" height="700">
-<img src="https://github.com/youssef-aoun/Units-Converter/assets/124771092/d5e10064-a92d-4e84-90c6-e45c33c20b60" width="450" height="700"></p>
+<p  align="center">
+<img src="https://github.com/youssef-aoun/Units-Converter/assets/124771092/4ecdea07-b531-43c7-998e-18d1b14fb95a" width="300" height="700">
+<img src="https://github.com/youssef-aoun/Units-Converter/assets/124771092/f0eda610-8351-4dc0-a194-318e07b3cb85" width="300" height="700">
+</p>
+
 
 <br><br>
 ### License:

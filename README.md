@@ -1,5 +1,5 @@
-# Units Converter Android App
-
+<h1><p align="center"><B>Units Converter Android App</B></p></h1>
+<h2><p align="center"><B>Welcome to the Unit Converter Android App repository!</B></p></h2>
 <p align="center"><img src="https://github.com/youssefaoun0/Units-Converter/assets/124771092/24aad5bf-9921-436b-89e5-1ed3c24a7b94" width="400" height="700"></p>
 
 <br><br>
